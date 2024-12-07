@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: lato;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+}
+
+
+
+/*---------------------------S C R O L L B A R ------------*/
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:rgb(156, 136, 126);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1dc5d1;
+    border-radius: 10vh;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #32efc6;
+    transition: ease-in-out 0.2s;
+  }
+
+body {
+    background-color: #ead1dcff;
+}
+
+.menuBtn {
+    height: 10vh;
+    width: 10vh;
+    background-color:#39dfceff;
+    filter: drop-shadow(rgb(40, 84, 92) 1px 1px 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10vh;
+    gap: 1vh;
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: ease-in-out 0.3s;
+    text-decoration: none;
+}
+
+.menuBtn h2 {
+    display: none;
+}
+
+.menuBtn img{
+    height: 50%;
+    width: auto;
+}
+
+.menuWhite {
+    display: none;
+}
+
+.menuBtn:hover {
+    background-color:#dc5b9cff;
+    filter: drop-shadow(rgb(98, 32, 94) 1px 1px 3px);
+    color: white;
+    width: 20vh;
+    
+    .menuWhite {
+        display: block;
+    }
+    h2 {
+        display: block;
+    }
+    .menuB {
+        display: none;
+    }
+}
+
+header {
+    height: 100%; width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 12.5vh;
+    background-color: #ead1dcff;
+    font-size: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #3b3b3b;
+    transition: ease-in-out 0.1s;
+}
+
+header a:hover {
+    font-size: 1.55rem;
+    cursor: pointer;
+    filter: drop-shadow(rgb(226, 226, 226) 0px 0 1px);
+    color: rgb(75, 187, 204);
+}
+
+.logo {
+    height: auto;
+    width: 10vw;
+    margin: auto;
+}
+
+.logo:hover {
+    filter: drop-shadow(0px 0px 1px rgb(109, 193, 131, 1)
+    );
+}
+
+/*------------------------------ NAVBAR ------------------------*/
+
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 50%;
+}
+
+.banner {
+    background-image: url(../Assets/SplashBackgroundCopy.png);
+    height: 50rem;
+    width: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contentBanner {
+    margin-top: 8vw;
+    margin-left: 5vw;
+}
+
+.contentBanner h1 {
+    color: #f3f3f3;
+    font-size: 4rem;
+    text-align: justify;
+    line-height: 5rem;
+    font-weight: 400;
+}
+
+/*.circledBtn {
+    height: 60px;
+    width: 180px;
+    background-color: #39dfceff;
+    border-radius: 25vh;
+    font-size: 1.8rem;
+    border-width: 0;
+    margin: 0 100px;
+    margin-top: 1rem;
+} */
+ 
+ .circledBtn {
+    background-color: #39dfceff;
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 25vh;
+    text-decoration: none;
+    margin: 0 100px;
+    margin-top: 1rem;
+ }
+
+.circledBtn:hover {
+    background-color: #dc5b9cff;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgb(83, 66, 84);
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#main {
+    height: 100vh; width: auto;
+    
+    /*
+    background-image: url(../Assets/BlueSplash.png);
+    background-repeat: no-repeat;
+    background-color: red;
+    margin: 3rem 0;
+    background-position: center;
+    background-size: contain;
+    */
+
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+#main h1 {
+    font-size: 3.5rem;
+    font-family: "Berkshire Swash", serif;
+    text-align: center;
+    font-weight: 200;
+}
+
+.specialities {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../Assets/BlueSplash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 3rem;
+}
+
+.paninis:hover, .brownies:hover, .beverages:hover {
+    background-color: rgb(223, 191, 174);
+    transition: 0.5s;
+}
+
+.paninis:hover img, .brownies:hover img, .beverages:hover img {
+    transform: scale(1.005); /* Incrementa el tamaño en un 10% */
+    transition: transform 0.5s; /* Suaviza la transición */
+}
+
+.paninis, .brownies {
+    width: 25vw; height: 75%;
+    background-color: #eacdbdff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    border-radius: 15vh;
+    box-shadow: 1px 1px 1rem 0.1px rgb(37, 37, 37, 0.6);
+}
+
+.beverages {
+    width: 35vw; height: 90%;
+    background-color: #eacdbdff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 15vh;
+    box-shadow: 1px 1px 1rem 0.1px rgb(37, 37, 37, 0.6);
+}
+
+.beverages img {
+    width: 28vw;
+}
+
+.brownies img {
+    width: 16vw;
+}
+
+.paninisImg {
+    height: auto;
+    width: 90%;
+}
+
+.paninisImg, .browniesImg, .beveragesImg {
+    filter: drop-shadow(1px 1px 5px rgb(44, 35, 25, 0.5));
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+#coffee {
+    display: flex;
+    justify-content: center;
+}
+
+.bannerCoffee {
+    height: 50vh;
+    width: 80%;
+    background: linear-gradient(to left, #5e361dff, #25211eff);
+    margin: 4rem 0;
+    border-radius: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.coffeeTxt {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 4rem;
+    color: #dadada;
+}
+
+.coffeeTxt h1 {
+    font-size: 2.8rem;
+    font-family: "Berkshire Swash", serif;
+    font-weight: 100;
+}
+
+.coffeeTxt h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    font-kerning: 1rem;
+}
+
+.coffeeSpoon {
+    height: 22vw;
+    width: auto;
+    position: absolute;
+    margin-left: -14vh;
+    margin-top: -23vh;
+    border-radius: 50%;
+    box-shadow: 1px 2px 10px rgb(40, 30, 25, 1);
+}
+
+#brownies {
+    background-color: #eacdbdff;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 20rem;
+    position: relative;
+    overflow: visible; /* Esto me permite ver el contenido aunque cruce del limite del elemento padre*/
+    background-image: url(../Assets/brownieTexturepng.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    width: 100vw; height: 80%;
+    position: absolute;
+    top: -50vh;
+    filter: drop-shadow(0 0 10px rgb(40, 24, 12, 0.8));
+}
+
+.brownieBoxes {
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.firstBox {
+    width: 30vw;
+    background-image: url(../Assets/BrownieTexture.jpg);
+    color: #eacdbd;
+    line-height: 3rem;
+    padding: 6rem 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    border-radius: 15vh;
+}
+
+.firstBox h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.firstBox h2 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondBox {
+    width: 50vw;
+    background-image: url(../Assets/BrownieTexture.jpg);
+    color: #eacdbd;
+    line-height: 3rem;
+    padding: 6rem 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    border-radius: 15vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tresBrownies img {
+    width: 30vw;
+    height: auto;
+}
+
+.chocolateDrip {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    right: 0;
+    top: -55%;
+}
+
+/* MEDIA QUERY -- 768px <-------------------->*/
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 60%;
+        -webkit-text-size-adjust:none;
+    }
+
+    .menuBtn {
+        height: 8vh;
+        width: 18vh;
+    }
+
+    .logo {
+        width: 12vw;
+    }
+
+    header a {
+        font-size: 2rem;
+    }
+
+    header a:hover {
+        font-size: 2.2rem;
+    }
+
+    .navBar {
+        margin-left: 40%;
+        gap: 2vh;
+    }
+
+    .banner {
+        background-image: url(../Assets/CoffeeBannerMobileCopy.png);
+        background-size: cover;
+    }
+
+    .specialities {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .specialities div {
+        width: 60%;
+    }
+    .specialities img {
+        height: 75%;
+        width: auto;
+    }
+
+    .bannerCoffee {
+        height: 30vh;
+        border-radius: 12vh;
+    }
+
+    .coffeeTxt {
+        margin-right: 10vh;
+    }
+
+    .coffeeSpoon {
+        margin-top: -10vh;
+    }
+
+    #brownies {
+        height: 70vh;
+    }
+
+    .separator {
+        height: 40%;
+        top: -24rem;
+    }
+
+    .brownieBoxes {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .firstBox {
+        border-radius: 10vh;
+    }
+    
+    .secondBox {
+        border-radius: 10vh;
+        text-align: center;
+    }
+
+    .secondBox img {
+        width: 20vh;
+    }
+
+}
+
+@media (max-width:468px) { /*----------------MEDIA QUERY MOBILE ------------------*/
+
+    html {
+        font-size: 50%;
+    }
+
+    .contentBanner {
+        margin-top: 0;
+    }
+
+    .banner {
+        background-image: url(../Assets/CoffeeBannerMobileCopy.png);
+        background-size: cover;
+        background-position: center;
+        height: 40rem;
+    }
+
+    .banner h1 {
+        filter: drop-shadow(1px 1px 4px rgb(97, 61, 20));
+    }
+
+    .circledBtn {
+        margin: 0 30px;
+        margin-top: 1rem;
+    }
+
+    .specialities div {
+        width: 80%;
+    }
+
+    .bannerCoffee {
+        height: 25vh;
+        border-radius: 10vh;
+        width: 90%;
+    }
+
+    .coffeeSpoon {
+        margin-top: -7vh;
+    }
+
+    #brownies {
+        height: 80vh;
+        align-items: center;
+    }
+
+    .separator {
+        height: 25%;
+        top: -11rem;
+    }
+
+    .firstBox {
+        border-radius: 7vh;
+        width: 40vw;
+    }
+    
+    .secondBox {
+        width: 70vw;
+        border-radius: 8vh;
+        font-size: 2rem;
+    }
+
+    .secondBox img {
+        height: 10vh;
+        width: 15vh;
+    }
+}
